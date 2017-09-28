@@ -15,3 +15,7 @@ Note that MatConvNet and VLfeat is needed and should be downloaded and compiled 
 .m functions under 'ResNet-Finetune-Train' files provide interface for training ResNet from scratch with different layer configuration and also differrent datasets are supported, and also ResNet fine-tune is supported only with some simple modification.
 Note that MatConvNet and VLfeat is needed and should be downloaded and compiled by yourself
 
+3-Classifier Implementation
+LDM code: Due to the copyright preservation, the implementation of LDM could be referenced from http://lamda.nju.edu.cn/code_ODM.ashx
+
+!Any question, please send email to wangguoqingcumt@hotmai.com.
