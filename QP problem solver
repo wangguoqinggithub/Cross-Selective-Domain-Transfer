@@ -1,0 +1,16 @@
+function [x,lam,fval]=qlag(H,A,b,c)    
+% 拉格朗日法求解二次规划问题    
+% min f(x)=0.5*x'Hx+c'x, s.t. Ax=b    
+% input: H,c分别是目标函数的矩阵和向量，A%  ，b分别是约束条件中的矩阵和向量    
+% output：(x,lam)是KT点，fval是最优值    
+    
+IH=inv(H);    
+AHA=A*IA*A';    
+IAHA=inv(AHA);    
+AIH=A*IH;    
+G=IH-AIH'*IAHA*AIH;    
+B=IAHA*AIH;    
+C=-IAHA;    
+x=B'*b-G*c;    
+lam=B*c-C*b;    
+fval=0.5*x'*H*x+c'*x;
